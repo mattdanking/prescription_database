@@ -20,5 +20,33 @@
   <%= @patient.insurance %>
 </p>
 
+<table>
+  <thead>
+    <tr> 
+      <th>Prescription</th>
+      <th>Quantity</th>
+      <th>Fill Date</th>
+      <th>Provider</th>
+      <th>NPI</th>
+      <th>Pharmacy ID</th>
+      <th>Phone</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @patient.histories.each do |h| %>
+      <tr> 
+        <td> <%= h.prescription %> </td>
+        <td> <%= h.quantity %> </td>
+        <td> <%= h.fill_date %> </td>
+        <td> <%= h.provider %> </td>
+        <td> <%= h.npi %> </td>
+        <td> <%= h.pharmacy_id %> </td>
+        <td> <%= h.phone %> </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+
 <%= link_to 'Edit', edit_patient_path(@patient) %> |
 <%= link_to 'Back', patients_path %>

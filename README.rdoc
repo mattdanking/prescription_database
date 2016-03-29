@@ -4,7 +4,7 @@ Database of Florida patients and and their full prescription history. Case Proje
 
 == Patient Information
 
-`Patient Name, Date of Birth, Address and Insurance information`
+_Patient Name, Date of Birth, Address and Insurance information_
 
 == Patient History
 

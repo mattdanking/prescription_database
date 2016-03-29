@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  prescription: MyString
+  quantity: MyString
+  fill_date: MyString
+  provider: MyString
+  npi: MyString
+  pharmacy_id: MyString
+  phone: MyString
+  patient_id: 
+
+two:
+  prescription: MyString
+  quantity: MyString
+  fill_date: MyString
+  provider: MyString
+  npi: MyString
+  pharmacy_id: MyString
+  phone: MyString
+  patient_id: 

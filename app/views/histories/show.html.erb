@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Prescription:</strong>
+  <%= @history.prescription %>
+</p>
+
+<p>
+  <strong>Quantity:</strong>
+  <%= @history.quantity %>
+</p>
+
+<p>
+  <strong>Fill date:</strong>
+  <%= @history.fill_date %>
+</p>
+
+<p>
+  <strong>Provider:</strong>
+  <%= @history.provider %>
+</p>
+
+<p>
+  <strong>Npi:</strong>
+  <%= @history.npi %>
+</p>
+
+<p>
+  <strong>Pharmacy:</strong>
+  <%= @history.pharmacy_id %>
+</p>
+
+<p>
+  <strong>Phone:</strong>
+  <%= @history.phone %>
+</p>
+
+<p>
+  <strong>Patient:</strong>
+  <%= @history.patient %>
+</p>
+
+<%= link_to 'Edit', edit_history_path(@history) %> |
+<%= link_to 'Back', histories_path %>

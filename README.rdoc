@@ -4,13 +4,13 @@ Database of Florida patients and and their full prescription history. Case Proje
 
 == Patient Information
 
-_Patient Name, Date of Birth, Address and Insurance information_
+  Patient Name, Date of Birth, Address and Insurance information
 
 == Patient History
 
 Each patient can have a history of prescriptions, ranging from provider, pharmacy and fill date.
 
-`Prescription, Quantity, Fill Date, Provider, NPI, Pharmacy ID, Phone`
+  Prescription, Quantity, Fill Date, Provider, NPI, Pharmacy ID, Phone
 
 
 

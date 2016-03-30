@@ -25,6 +25,25 @@ h3 {
   margin-left: 40px;
 }
 
+.btn {
+  float: right;
+  background-color: #adc2eb !important;
+  border-color: #adc2eb !important;
+  color: #2C2F30 !important;
+}
+
+.btn:hover {
+  background-color: #D5DFF2 !important;
+  border-color: #D5DFF2 !important;  
+  color: white !important;
+}
+
+.btn a, .btn a:hover {
+  text-decoration: none !important;
+  background-color: inherit !important;
+  color: inherit !important;
+}
+
 /*Header*/
 
 .main-header {
@@ -160,22 +179,13 @@ h3 {
   margin-top: -40px;
   margin-bottom: 20px;
   margin-right: 25%;
-  width: 200px;
+  width: 180px;
 }
 
 /*Patient History Table*/
 
-.btn {
-  float: right;
-  background-color: #adc2eb !important;
-  border: #adc2eb !important;
-  color: #2C2F30 !important;
-}
-
-.btn a, .btn a:hover {
-  text-decoration: none !important;
-  background-color: inherit !important;
-  color: inherit !important;
+#add-prescription {
+  display: inherit;
 }
 
 .form-group {
@@ -183,7 +193,7 @@ h3 {
 }
 
 .form-group .search {
-  width: 200px !important;
+  width: 180px !important;
 }
 
 .table {

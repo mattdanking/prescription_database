@@ -14,23 +14,34 @@
  *= require_self
  */
 
+/*Header*/
+
+.main-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background-color:  #9AACB3;
+}
+
 
 /*Body*/
 
 body {
   padding-left: 250px;
-  padding-top: 150px;
+  padding-top: 200px;
 }
 
 /*Navigation Menu*/
 
 
 #sidebar-wrapper {
-  top: 52px;
+  top: 100px;
   left: -200px;
   width: 200px;
-  background-color: #5677fc;
-  color: white;
+  background-color:  #adc2eb;
+  color: #2C2F30;
   position: fixed;
   height: 100%;
   z-index: 1;
@@ -48,7 +59,8 @@ body {
   line-height: 50px;
 }
 .sidebar-nav li a {
-  color: white;
+  color: #2C2F30;
+  font-weight: bold;
   display: block;
   text-decoration: none;
 }

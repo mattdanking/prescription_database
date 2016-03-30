@@ -156,8 +156,22 @@ h3 {
 
 /*Patient History*/
 
-#patient-history {
+.form-group {
+  float: left;
+  margin-left: 40px;
+}
+
+.form-group input {
+  width: 160px
+}
+
+.table {
   width: 100%;
+  margin-top: 20px;
+}
+
+.table th {
+  text-align: left;
 }
 
 .results tr[visible='false'],

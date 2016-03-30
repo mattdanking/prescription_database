@@ -1,5 +1,7 @@
 <p id="notice"><%= notice %></p>
 
+<br>
+
 <h3>Patient Information:</h3>
 
 <div id="patient-info">
@@ -35,15 +37,16 @@
 <h3>Patient Fill History:</h3>
 
 <div class="form-group pull-right">
-    <input type="text" class="search form-control" placeholder="What you looking for?">
+    <input type="text" class="search form-control" placeholder="Search patient history">
 </div>
 <span class="counter pull-right"></span>
 <table class="table table-hover table-bordered results">
   <thead>
     <tr>
-      <th>Prescription</th>
-      <th>Quantity</th>
-      <th>Fill Date</th>
+      <th>#</th>
+      <th class="col-md-5 col-xs-5">Prescription</th>
+      <th class="col-md-4 col-xs-4">Quantity</th>
+      <th class="col-md-3 col-xs-3">Fill Date</th>
       <th>Provider</th>
       <th>NPI</th>
       <th>Pharmacy ID</th>
@@ -56,6 +59,7 @@
   <tbody>
     <% @patient.histories.each do |h| %>
       <tr> 
+        <td scope="row"> <%= h.id %> </td>
         <td> <%= h.prescription %> </td>
         <td> <%= h.quantity %> </td>
         <td> <%= h.fill_date %> </td>

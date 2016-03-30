@@ -2,25 +2,33 @@
 
 <h3>Patient Information:</h3>
 
-<p>
-  <strong>Name:</strong>
-  <%= @patient.name %>
-</p>
+<div id="patient-info">
+  <div id="patient-info-info">
+    <span class="patient-data">
+      <p>
+        <strong>Name:</strong>
+        <%= @patient.name %>
+      </p>
 
-<p>
-  <strong>Dob:</strong>
-  <%= @patient.dob %>
-</p>
+      <p>
+        <strong>DOB:</strong>
+        <%= @patient.dob %>
+      </p>
+    </span>
 
-<p>
-  <strong>Address:</strong>
-  <%= @patient.address %>
-</p>
+    <span class="patient-data">
+      <p>
+        <strong>Address:</strong>
+        <%= @patient.address %>
+      </p>
 
-<p>
-  <strong>Insurance:</strong>
-  <%= @patient.insurance %>
-</p>
+      <p>
+        <strong>Insurance:</strong>
+        <%= @patient.insurance %>
+      </p>
+    </span>
+  </div>
+</div>
 
 <br><br>
 
@@ -55,4 +63,4 @@
 
 
 <%= link_to 'Edit', edit_patient_path(@patient) %> |
-<%= link_to 'Back', patients_path %>
+<%= link_to 'Add Prescription', new_history_path %>

@@ -185,11 +185,14 @@ h3 {
 /*Patient History Table*/
 
 #add-prescription {
-  display: inherit;
+  margin-top: -40px !important;
 }
 
 .form-group {
+  margin-top: -40px !important;
   margin-right: 25% !important;
+  margin-bottom: 20px !important;
+  margin-left: 10px;
 }
 
 .form-group .search {
@@ -201,8 +204,9 @@ h3 {
   margin: 0 auto !important;
 }
 
-.table th {
-  text-align: left;
+.counter {
+  margin-top: -40px !important;
+  margin-right: 20% !important;
 }
 
 .results tr[visible='false'],

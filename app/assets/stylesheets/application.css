@@ -14,6 +14,17 @@
  *= require_self
  */
 
+ /*Body*/
+
+body {
+  padding-left: 200px;
+  padding-top: 100px;
+}
+
+h3 {
+  margin-left: 40px;
+}
+
 /*Header*/
 
 .main-header {
@@ -57,12 +68,6 @@
   margin: 40px 50px 0 100px;
 }
 
-/*Body*/
-
-body {
-  padding-left: 250px;
-  padding-top: 100px;
-}
 
 /*Navigation Menu*/
 
@@ -82,7 +87,7 @@ body {
   top: 0;
   margin: 0;
   padding: 0;
-  width: 250px;
+  width: 200px;
   list-style: none;
 }
 .sidebar-nav li {
@@ -123,8 +128,7 @@ body {
 /*Patient Info*/
 
 #patient-info {
-  margin-left: -60px;
-  width: 150%;
+  width: 100%;
   height: 100px;
   background-color: #E3E3E3;
   border: 1px solid;
@@ -144,4 +148,28 @@ body {
 
 .patient-data p {
   font-size: 16px;
+}
+
+.patient-data p strong {
+  font-weight: 600;
+}
+
+/*Patient History*/
+
+#patient-history {
+  width: 100%;
+}
+
+.results tr[visible='false'],
+.no-result{
+  display:none;
+}
+
+.results tr[visible='true']{
+  display:table-row;
+}
+
+.counter{
+  padding:8px; 
+  color:#ccc;
 }

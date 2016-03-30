@@ -25,6 +25,32 @@
   background-color:  #9AACB3;
 }
 
+#pharm-logo {
+  top: 30px;
+  width: 150px;
+  height: 150px;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  position: relative;
+  float: right;
+  background-image: url("/assets/pharm_2color.png");
+  margin-right: 50px;
+}
+
+.pharm-title {
+  position: relative;
+  float: left;
+}
+
+.pharm-title h1 {
+  margin: 40px 50px 0 50px;
+  font-size: 44px;
+}
+
+.pharm-title h2 {
+  margin: 40px 50px 0 60px;
+}
 
 /*Body*/
 

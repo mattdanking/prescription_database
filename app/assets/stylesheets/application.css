@@ -56,8 +56,8 @@ h3 {
 }
 
 .pharm-title h1 {
-  margin: 20px 50px 0 20px;
-  font-size: 54px;
+  margin: 20px 0 0 10px;
+  font-size: 64px;
   font-weight: 200;
   font-family: Georgia, serif;
   color: white;
@@ -65,7 +65,7 @@ h3 {
 }
 
 .pharm-title h2 {
-  margin: 40px 50px 0 100px;
+  margin: 40px 0 0 90px;
 }
 
 
@@ -159,7 +159,7 @@ h3 {
 #edit-patient {
   margin-top: -40px;
   margin-bottom: 20px;
-  margin-right: 5%;
+  margin-right: 25%;
   width: 200px;
 }
 
@@ -179,7 +179,7 @@ h3 {
 }
 
 .form-group {
-  margin-right: 5% !important;
+  margin-right: 25% !important;
 }
 
 .form-group .search {

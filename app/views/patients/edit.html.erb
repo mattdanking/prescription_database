@@ -1,6 +1,8 @@
-<h1>Editing Patient</h1>
+<div class="edit-body">
+  <h1 class="subject-head" margin-left=-40px>Editing Patient</h1>
 
-<%= render 'form' %>
+  <%= render 'form' %>
 
-<%= link_to 'Show', @patient %> |
-<%= link_to 'Back', patients_path %>
+  <button type="button" class="btn btn-secondary" class="edit-patient-btn"><%= link_to 'Show', @patient %></button> |
+  <button type="button" class="btn btn-secondary" class="edit-patient-btn"><%= link_to 'Back', :back %></button>
+</div>

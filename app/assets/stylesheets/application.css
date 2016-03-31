@@ -21,6 +21,11 @@ body {
   padding-top: 100px;
 }
 
+.form-submit-button {
+  background: none !important;
+}
+
+
 .subject-head {
   margin-left: 40px;
   font-weight: 700;
@@ -48,7 +53,16 @@ body {
 .btn-info a, .btn-info a:hover {
   text-decoration: none !important;
   background-color: inherit !important;
+  border-color: #adc2eb !important;
   color: inherit !important;
+}
+
+.edit-body {
+  text-align: center;
+  width: 100%;
+}
+
+.address-field {
 }
 
 /*Header*/
@@ -194,6 +208,11 @@ body {
   margin-bottom: 20px;
   margin-right: 25%;
   width: 180px;
+}
+
+.edit-patient-btn a:hover {
+  text-decoration: none !important;
+  background-color: none !important;  
 }
 
 /*Patient History Table*/

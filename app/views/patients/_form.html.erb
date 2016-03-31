@@ -16,12 +16,12 @@
     <%= f.text_field :name %>
   </div>
   <div class="field">
-    <%= f.label :dob %><br>
+    <%= f.label :dob, "DOB" %><br>
     <%= f.text_field :dob %>
   </div>
   <div class="field">
     <%= f.label :address %><br>
-    <%= f.text_field :address %>
+    <%= f.text_area :address, :cols => "25", :rows => "2" %>
   </div>
   <div class="field">
     <%= f.label :insurance %><br>

@@ -26,20 +26,25 @@ h3 {
   font-family: Georgia, serif;
 }
 
-.btn {
+.btn:hover {
+ background-color: white !important;
+ text-decoration: none !important;
+}
+
+.btn-info {
   float: right;
   background-color: #adc2eb !important;
   border-color: #adc2eb !important;
   color: #2C2F30 !important;
 }
 
-.btn:hover {
+.btn-info:hover {
   background-color: #D5DFF2 !important;
   border-color: #D5DFF2 !important;  
   color: white !important;
 }
 
-.btn a, .btn a:hover {
+.btn-info a, .btn-info a:hover {
   text-decoration: none !important;
   background-color: inherit !important;
   color: inherit !important;

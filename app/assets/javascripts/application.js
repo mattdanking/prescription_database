@@ -26,7 +26,7 @@ $(window).resize(function() {
   }else{
     document.getElementsByClassName("sidebar-toggle")[0].style.left="-200px";
   }
-});
+}); 
 $(document).ready(function() {
   $('.dropdown').on('show.bs.dropdown', function(e){
       $(this).find('.dropdown-menu').first().stop(true, true).slideDown(300);
@@ -49,7 +49,7 @@ $(document).ready(function() {
 
 // Patient History Table //
 
-$(document).ready(function() {
+function ready() {
   $(".search").keyup(function () {
     var searchTerm = $(".search").val();
     var listItem = $('.results tbody').children('tr');
@@ -74,4 +74,13 @@ $(document).ready(function() {
   if(jobCount == '0') {$('.no-result').show();}
     else {$('.no-result').hide();}
       });
-});
+
+  $('.table tr').click(function() {
+        var href = $(this).find("a").attr("href");
+        if(href) {
+            window.location = href;
+        }
+    });
+};
+
+$(document).on('ready page:load', ready)

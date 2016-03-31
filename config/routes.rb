@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  root :to => 'patients#show', :id => 1
+  root "patients#index"
   resources :histories
   resources :patients
   # The priority is based upon order of creation: first created -> highest priority.

@@ -42,7 +42,7 @@
     <div id="sidebar-wrapper" class="sidebar-toggle">
       <ul class="sidebar-nav">
           <li>
-              <a href="#item1">Home</a>
+              <%= link_to "Home", root_path %>
           </li>
           <li>
               <%= link_to "Patient Search", :controller => :patients, :action => :index %>

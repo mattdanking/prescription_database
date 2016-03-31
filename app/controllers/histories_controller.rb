@@ -21,6 +21,8 @@ class HistoriesController < ApplicationController
 
   # GET /histories/1/edit
   def edit
+    @patient = @history.patient
+    @history.patient_id = params[:patient_id]
   end
 
   # POST /histories

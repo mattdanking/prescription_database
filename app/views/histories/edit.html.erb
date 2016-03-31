@@ -2,5 +2,5 @@
 
 <%= render 'form' %>
 
-<%= link_to 'Show', @history %> |
-<%= link_to 'Back', histories_path %>
+<%= link_to 'Show', patient_history_path(@history.patient.id, @history) %> |
+<%= link_to 'Back', :back %>

@@ -81,6 +81,10 @@ body {
   float: left;
 }
 
+.pharm-title a:hover {
+  text-decoration: none;
+}
+
 .pharm-title h1 {
   margin: 20px 0 0 10px;
   font-size: 54px;

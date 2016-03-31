@@ -11,39 +11,45 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :prescription %><br>
-    <%= f.text_field :prescription %>
-  </div>
-  <div class="field">
-    <%= f.label :quantity %><br>
-    <%= f.text_field :quantity %>
-  </div>
-  <div class="field">
-    <%= f.label :fill_date %><br>
-    <%= f.text_field :fill_date %>
-  </div>
-  <div class="field">
-    <%= f.label :provider %><br>
-    <%= f.text_field :provider %>
-  </div>
-  <div class="field">
-    <%= f.label :npi %><br>
-    <%= f.text_field :npi %>
-  </div>
-  <div class="field">
-    <%= f.label :pharmacy_id %><br>
-    <%= f.text_field :pharmacy_id %>
-  </div>
-  <div class="field">
-    <%= f.label :phone %><br>
-    <%= f.text_field :phone %>
-  </div>
-  <div class="field">
-    <%= f.label :patient_id %><br>
-    <%= f.text_field :patient_id %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+<div id="history-form">
+  <span class="history-form">
+    <div class="field">
+      <%= f.label :prescription %><br>
+      <%= f.text_field :prescription %>
+    </div>
+    <div class="field">
+      <%= f.label :quantity %><br>
+      <%= f.text_field :quantity %>
+    </div>
+    <div class="field">
+      <%= f.label :fill_date %><br>
+      <%= f.text_field :fill_date %>
+    </div>
+  </span>
+
+  <span class="history-form">
+    <div class="field">
+      <%= f.label :provider %><br>
+      <%= f.text_field :provider %>
+    </div>
+    <div class="field">
+      <%= f.label :npi, "NPI" %><br>
+      <%= f.text_field :npi %>
+    </div>
+    <div class="field">
+      <%= f.label :pharmacy_id %><br>
+      <%= f.text_field :pharmacy_id %>
+    </div>
+    <div class="field">
+      <%= f.label :phone %><br>
+      <%= f.text_field :phone %>
+    </div>
+    <div class="field">
+      <%= f.hidden_field :patient_id, :value => @history.patient_id %>
+    </div>
+    <div class="actions">
+      <%= f.submit "Add Prescription" %>
+    </div>
+  </span>
+</div>
 <% end %>

@@ -1,5 +1,8 @@
-<h1>New Prescription</h1>
+<div class="edit-body">
 
-<%= render 'form' %>
+  <h1 class="edit-head">New Prescription</h1>
 
-<%= link_to 'Back', histories_path %>
+  <%= render 'form' %>
+
+  <button type="button" class="btn btn-secondary" class="edit-patient-btn"><%= link_to 'Back', :back %></button>
+</div>

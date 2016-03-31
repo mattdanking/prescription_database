@@ -32,6 +32,11 @@ body {
   font-family: Georgia, serif;
 }
 
+.edit-head {
+  font-weight: 700;
+  font-family: Georgia, serif;
+}
+
 .btn:hover {
  background-color: white !important;
  text-decoration: none !important;
@@ -216,6 +221,16 @@ body {
 }
 
 /*Patient History Table*/
+
+#history-form {
+  width: 100%;
+  display: table;
+}
+
+.history-form {
+  display: table-row;
+  vertical-align: middle;
+}
 
 #add-prescription {
   margin-top: -40px !important;

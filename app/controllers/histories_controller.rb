@@ -15,6 +15,8 @@ class HistoriesController < ApplicationController
   # GET /histories/new
   def new
     @history = History.new
+    @patient = @history.patient
+    @history.patient_id = params[:patient_id]
   end
 
   # GET /histories/1/edit
@@ -25,6 +27,7 @@ class HistoriesController < ApplicationController
   # POST /histories.json
   def create
     @history = History.new(history_params)
+    @history.patient_id = params[:patient_id]
 
     respond_to do |format|
       if @history.save

@@ -11,7 +11,13 @@
     </div>
   <% end %>
 
+  <br>
+
 <div id="history-form">
+  <span class="history-form">
+    <div class="empty">
+    </div>
+  </span>
   <span class="history-form">
     <div class="field">
       <%= f.label :prescription %><br>
@@ -47,8 +53,14 @@
     <div class="field">
       <%= f.hidden_field :patient_id, :value => @history.patient_id %>
     </div>
+  </span>
+  <span class="history-form">
     <div class="actions">
       <%= f.submit "Add Prescription" %>
+    </div>
+  </span>
+  <span class="history-form">
+    <div class="empty">
     </div>
   </span>
 </div>

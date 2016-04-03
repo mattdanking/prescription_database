@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
-  # root "patients#index"
-  root :to => 'patients#show', :id => 1
+  root "patients#index"
+  # root :to => 'patients#show', :id => 1
   
   resources :patients do
     resources :histories

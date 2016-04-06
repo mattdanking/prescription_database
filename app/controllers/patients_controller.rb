@@ -31,6 +31,11 @@ class PatientsController < ApplicationController
   # GET /patients.json
   def index
     @patients = Patient.all
+    if params[:term]
+      @patients= Patient.search(params[:term]).order("created_at DESC")
+    else
+      @patients = Patient.all.order('created_at DESC')
+    end
   end
 
   # GET /patients/1

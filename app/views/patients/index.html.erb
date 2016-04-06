@@ -5,9 +5,9 @@
 <h3 class="subject-head">Patient Database</h3>
 
 
-<%= form_for @patient, url: patients_search_path do |f| %>
-  <%= f.text_field :name, :class => "form-control", :placeholder => 'Search by Name', :id => 'form-font-size' %>
-  <%= f.text_field :dob, :class => "form-control", :placeholder => 'Search by Date of Birth', :id => 'form-font-size' %>
+<%= form_for patients_path, :method => "get", :id => 'search-form'  do |f| %>
+  <%= f.text_field :name, :placeholder => 'Search by Name' %>
+  <%= f.text_field :dob, :placeholder => 'Search by Date of Birth' %>
   <%= f.submit "Search" %>
 <% end %>
 

@@ -3,6 +3,9 @@ Rails.application.routes.draw do
   root "landing#index"
   # root :to => 'patients#show', :id => 1
 
+  get 'patients/search' => 'patients#search'
+  post 'patients/search' => 'patients#search'
+
   resources :landing
   
   resources :patients do

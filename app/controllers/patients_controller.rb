@@ -1,6 +1,32 @@
 class PatientsController < ApplicationController
   before_action :set_patient, only: [:show, :edit, :update, :destroy]
 
+  def search
+    name = params[:name]
+    dob = params[:dob]
+
+    # if term is nil, search page
+    return if name.nil? && dob.nil?
+
+    if name.present?
+      # [Artist, Label, Album] => [[artists], [labels], [albums]] -- .MAP: transforms this array of classes into array of data from those classes
+      @results = [Patient].map do |model|
+        # searches our database
+        model.search_name(term)
+      end.flatten
+    else dob.present?
+      @results = [Patient].map do |model|
+        # searches our database
+        model.search_dob(term)
+      end.flatten
+    end
+
+    require 'pp'
+    pp @results
+    # @results = artists + labels + albums # add the array-like objects
+
+  end
+
   # GET /patients
   # GET /patients.json
   def index

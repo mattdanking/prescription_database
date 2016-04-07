@@ -4,9 +4,16 @@
 
 <h3 class="subject-head">Patient Database</h3>
 
+<div id="patient-warning">
+  <div id="patient-warning-text">
+    <p>Warning: By searching this database, you authorize you have the necessary permission and credentials to access this information.</p>
+  </div>
+</div>
+
+<br>
 
 <%= form_tag patients_path, :method => "get", :id => 'search-form'  do %>
-  <%= text_field_tag :name, params[:name], :placeholder => 'Search by Name' %>
+  <%= text_field_tag :name, params[:name], :placeholder => 'Search by Name', :id => 'search-name' %>
   <%= text_field_tag :dob, params[:dob], :placeholder => 'Search by Date of Birth' %>
   <%= submit_tag "Search", name: nil %>
 <% end %>

@@ -171,6 +171,30 @@ body {
   }
 }
 
+
+/*
+##############
+    PATIENT INDEX SEARCH PAGE
+##############
+*/
+
+#search-name {
+  margin-left: 40px;
+}
+
+#patient-warning {
+  display: table;
+  width: 100%;
+  text-align: center;
+}
+
+#patient-warning-text {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+
+
 /*
 ##############
     PATIENT
@@ -280,3 +304,5 @@ body {
 .empty {
   width: 12em;
 }
+
+

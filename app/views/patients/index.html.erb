@@ -13,8 +13,8 @@
 <br>
 
 <%= form_tag patients_path, :method => "get", :id => 'search-form'  do %>
-  <%= text_field_tag :name, params[:name], :placeholder => 'Search by Name', :id => 'search-name' %>
-  <%= date_field_tag :dob, params[:dob], :placeholder => 'Search by Date of Birth' %>
+  <%= text_field_tag :name, params[:name], :placeholder => '  Search by Name', :id => 'search-name' %>
+  <%= date_field_tag :dob, params[:dob], :placeholder => 'Search by Date of Birth', :id => 'search-dob' %>
   <%= submit_tag "Search", name: nil %>
 <% end %>
 

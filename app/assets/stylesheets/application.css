@@ -219,6 +219,13 @@ body {
 #search-name {
   margin-left: 40px;
   width: 200px;
+  border-radius: 4px;
+  height: 2.4em;
+}
+
+#search-dob {
+  border-radius: 4px;
+  height: 2.4em;
 }
 
 .patient-warning {

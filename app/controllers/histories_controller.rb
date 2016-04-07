@@ -30,10 +30,11 @@ class HistoriesController < ApplicationController
   def create
     @history = History.new(history_params)
     @history.patient_id = params[:patient_id]
+    @patient = @history.patient
 
     respond_to do |format|
       if @history.save
-        format.html { redirect_to root_path, notice: 'Prescription was successfully created.' }
+        format.html { redirect_to @patient, notice: 'Prescription was successfully created.' }
         format.json { render :show, status: :created, location: @history }
       else
         format.html { render :new }

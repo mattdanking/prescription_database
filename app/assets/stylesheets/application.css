@@ -180,12 +180,35 @@ body {
 
 #home-box {
   width: 100%;
+  text-align: center;
 }
 
 
 #home-box-text {
-  margin-left: 40px;
+  margin: 0 auto;
+  width: 820px;
+  height: 200px;
+  border-radius: 4px;
+  background-color: #CCE1E8;
 }
+
+#home-box-text p {
+  margin: auto;
+  vertical-align: middle;
+  color: #2C2F30;
+  padding-top: 3em;
+  padding-right: 2em;
+  padding-left: 2em;
+  font-size: 20px;
+  line-height: 1.5em;
+}
+
+.landing-head {
+  text-align: center;
+  font-weight: 700;
+  font-family: Georgia, serif;
+}
+
 
 /*
 ##############
@@ -198,29 +221,30 @@ body {
   width: 200px;
 }
 
-#patient-warning {
+.patient-warning {
   /*display: table;*/
   width: 100%;
   text-align: center;
 }
 
-#patient-warning-text {
+.patient-warning-text {
   /*display: table-cell;*/
   /*vertical-align: middle;*/
   margin: 0 auto;
-  background-color: #CCE1E8;
   width: 585px;
   padding-top: 0.7em;
   padding-bottom: 0.3em;
   padding-left: 4em;
   padding-right: 4em;
   border-radius: 4px;
-/*  border: solid #2C2F30;
-  border-width: 1px;
-*/}
+  border: solid #CCE1E8;
+  border-width: 4px;
+  /*background-color: #F5F5F5;*/
+}
 
-#patient-warning-text p {
+.patient-warning-text p {
   color:  #e60000;
+  font-size: 18px;
 }
 
 #no-search-results {

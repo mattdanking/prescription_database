@@ -31,9 +31,10 @@ class PatientsController < ApplicationController
   # GET /patients.json
   def index
     if params[:name] || params[:dob]
-      @patients= Patient.search(params[:name], params[:dob]).order("created_at DESC")
-    else
-      @patients = Patient.all.order('created_at DESC')
+      @patients = Patient.search(params[:name], params[:dob]).order("created_at DESC")
+      p @patients
+    # else
+      # @patients = Patient.all.order('created_at DESC')
     end
   end
 

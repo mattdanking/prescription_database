@@ -90,7 +90,7 @@ body {
   background-position: center center;
   position: relative;
   float: right;
-  background-image: url("/assets/pharm_2color.png");
+  background-image: url("/assets/nationalpharm.png");
   margin-right: 50px;
   z-index: 1;
 }

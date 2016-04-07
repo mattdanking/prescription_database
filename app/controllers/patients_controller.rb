@@ -1,38 +1,37 @@
 class PatientsController < ApplicationController
   before_action :set_patient, only: [:show, :edit, :update, :destroy]
 
-  def search
-    name = params[:name]
-    dob = params[:dob]
+  # def search
+  #   name = params[:name]
+  #   dob = params[:dob]
 
-    # if term is nil, search page
-    return if name.nil? && dob.nil?
+  #   # if term is nil, search page
+  #   return if name.nil? && dob.nil?
 
-    if name.present?
-      # [Artist, Label, Album] => [[artists], [labels], [albums]] -- .MAP: transforms this array of classes into array of data from those classes
-      @results = [Patient].map do |model|
-        # searches our database
-        model.search_name(term)
-      end.flatten
-    else dob.present?
-      @results = [Patient].map do |model|
-        # searches our database
-        model.search_dob(term)
-      end.flatten
-    end
+  #   if name.present?
+  #     # [Artist, Label, Album] => [[artists], [labels], [albums]] -- .MAP: transforms this array of classes into array of data from those classes
+  #     @results = [Patient].map do |model|
+  #       # searches our database
+  #       model.search_name(term)
+  #     end.flatten
+  #   else dob.present?
+  #     @results = [Patient].map do |model|
+  #       # searches our database
+  #       model.search_dob(term)
+  #     end.flatten
+  #   end
 
-    require 'pp'
-    pp @results
-    # @results = artists + labels + albums # add the array-like objects
+  #   require 'pp'
+  #   pp @results
+  #   # @results = artists + labels + albums # add the array-like objects
 
-  end
+  # end
 
   # GET /patients
   # GET /patients.json
   def index
-    @patients = Patient.all
-    if params[:term]
-      @patients= Patient.search(params[:term]).order("created_at DESC")
+    if params[:name] || params[:dob]
+      @patients= Patient.search(params[:name], params[:dob]).order("created_at DESC")
     else
       @patients = Patient.all.order('created_at DESC')
     end

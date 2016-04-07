@@ -5,61 +5,49 @@
 <h3 class="subject-head">Patient Database</h3>
 
 
-<%= form_for patients_path, :method => "get", :id => 'search-form'  do |f| %>
-  <%= f.text_field :name, :placeholder => 'Search by Name' %>
-  <%= f.text_field :dob, :placeholder => 'Search by Date of Birth' %>
-  <%= f.submit "Search" %>
+<%= form_tag patients_path, :method => "get", :id => 'search-form'  do %>
+  <%= text_field_tag :name, params[:name], :placeholder => 'Search by Name' %>
+  <%= text_field_tag :dob, params[:dob], :placeholder => 'Search by Date of Birth' %>
+  <%= submit_tag "Search", name: nil %>
 <% end %>
 
-<p> 
-  <% if @results.nil? %>
-    Please search for a patient by their name or date of birth
+<% if @patients.present? %>
 
-    WARNING: By using this..
-
-  <% elsif @results.empty? %> <!-- same as .count == 0 OR .count.zero? -->
-    Nothing found. Try your search again.
-  <% else %>
-    <ul>
-    <% @results.each do |result| %>
-      <li><%= link_to result.name, result %> <!-- link_to LINK NAME, LINK PATH ; PATH = "/artists/#{result.id}" or artist_path(result) or result AKA #{result.class.to_s.downcase.pluralize}/#{result.id}-->
-    <% end %>
-    </ul>
-  <% end %>
-</p>
-
-
-<!-- <div class="form-group pull-right">
+  <div class="form-group pull-right">
     <input type="text" class="search form-control" placeholder="Search Patient Database">
-</div>
-<span class="counter pull-right"></span>
-<button type="button" class="btn btn-info" id="add-prescription">  
-  <a><%= link_to 'New Patient', new_patient_path %></a>
-</button>
-<table class="table table-hover table-bordered results">
-  <thead>
-    <tr>
-      <th>#</th>
-      <th class="col-md-3 col-xs-3">Name</th>
-      <th class="col-md-1 col-xs-1">DOB</th>
-      <th class="col-md-3 col-xs-3">Address</th>
-      <th>Insurance</th>
-      <th colspan="1"></th>
-    </tr>
-    <tr class="warning no-result">
-      <td colspan="4"><i class="fa fa-warning"></i> No result</td>
-    </tr>
-  </thead>
-  <tbody>
-    <% @patients.each do |p| %>
-      <tr> 
-        <td scope="row"> <%= p.id %> </td>
-        <td> <%= p.name %> </td>
-        <td> <%= p.dob %> </td>
-        <td> <%= p.address %> </td>
-        <td> <%= p.insurance %> </td>
-        <td><a href="/patients/<%= p.id %>"><button type="button" class="btn btn-link">Display</button></a></td>
+  </div>
+  <span class="counter pull-right"></span>
+  <button type="button" class="btn btn-info" id="add-prescription">  
+    <a><%= link_to 'New Patient', new_patient_path %></a>
+  </button>
+  <table class="table table-hover table-bordered results">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th class="col-md-3 col-xs-3">Name</th>
+        <th class="col-md-1 col-xs-1">DOB</th>
+        <th class="col-md-3 col-xs-3">Address</th>
+        <th>Insurance</th>
+        <th colspan="1"></th>
       </tr>
-    <% end %>
-  </tbody>
-</table> -->
+      <tr class="warning no-result">
+        <td colspan="4"><i class="fa fa-warning"></i> No result</td>
+      </tr>
+    </thead>
+    <tbody>
+      <% @patients.each do |p| %>
+        <tr> 
+          <td scope="row"> <%= p.id %> </td>
+          <td> <%= p.name %> </td>
+          <td> <%= p.dob %> </td>
+          <td> <%= p.address %> </td>
+          <td> <%= p.insurance %> </td>
+          <td><a href="/patients/<%= p.id %>"><button type="button" class="btn btn-link">Display</button></a></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+<% else %>
+  <p>There are no patients containing your search terms.</p>
+<% end %>

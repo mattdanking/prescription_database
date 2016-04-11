@@ -105,8 +105,8 @@ body {
 }
 
 .pharm-title h1 {
-  margin: 20px 0 0 10px;
-  font-size: 54px;
+  margin: 25px 0 0 20px;
+  font-size: 48px;
   font-weight: 200;
   font-family: Georgia, serif;
   color: white;
@@ -114,7 +114,7 @@ body {
 }
 
 .pharm-title h2 {
-  margin: 40px 0 0 130px;
+  margin: 40px 0 0 100px;
   color: #2C2F30;
   font-family: Georgia, serif;
   /*text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;*/
